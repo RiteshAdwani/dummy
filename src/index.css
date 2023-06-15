@@ -1,0 +1,321 @@
+body{
+font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#root{
+  height: 100vh;
+}
+
+/* Sidebar  */
+
+.sidebar{
+  flex:1.1;
+  height: 100vh;
+  position: sticky;
+  top:0;
+}
+
+.sidebar-item{
+  cursor: pointer;
+  padding: 3px;
+}
+
+.sidebar-item:hover{
+  background-color: rgba(182, 182, 182, 0.288);
+  border-radius: 8px;
+}
+
+.sidebar-sign-in-btn, .navbar-sign-in-btn{
+  padding: 3px 15px;
+  background-color: transparent;
+  border: 1px solid #3ea6ff;
+  color:#3ea6ff;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.logo-img{
+  height:50px;
+  width:45px; 
+}
+
+/* Navbar */
+
+.nav-and-body{
+  flex:7;
+} 
+
+.navbar-container{
+  position: sticky;
+  top: 0;
+  padding: 25px 0;
+}
+
+.navbar-dark{
+  background-color: #121212;
+}
+
+.navbar-light{
+  background-color: #fff;
+}
+
+.navbar-wrapper{
+  position: relative;
+  background-color: inherit;
+  z-index: 999;
+}
+
+.search-bar, .add-comment-input{
+ background-color: transparent;
+ color: inherit;
+ border: none;
+ outline: none;
+ width: 95%;
+}
+
+.search-bar-wrapper{
+  position: relative;
+  left: 0;
+  right: 10%;
+  margin: auto;
+  top:7%;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 35%;
+}
+
+.search-icon{
+  position: absolute;
+  top:12%;
+  right:1%;
+}
+
+/* Video Cards */
+
+.video-page-link, .logo-link, .home-link{
+  color: inherit;
+}
+
+.video-card{
+  width: 360px;
+  margin-bottom: 45px;
+  cursor:pointer;
+}
+
+.video-card-sm{
+  margin-bottom: 20px;
+  width: 360px;
+}
+
+.thumbnail-img{
+  height: 202px;
+  background-color: #999 ;
+}
+
+.thumbnail-img-sm{
+  height: 102px;
+  background-color: #999 ;
+  width: 50%;
+}
+
+.channel-img{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+.video-title-text{
+  font-size: 16px;
+  font-weight:500;
+}
+
+.channel-name-text, .video-description-text, .comment-text{
+  font-size : 14px;
+}
+
+.video-info-text{
+  font-size: 12px;
+}
+
+/* Video page */
+
+.video-page-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.current-video{
+  height: 560px;
+}
+
+.video-content{
+  flex:5;
+}
+
+.video-recommendations{
+  flex:2
+}
+
+.video-content-title, .video-channel-name{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.video-content-btn{
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.channel-subscriber-count, .comment-date{
+  font-size: 13px;
+}
+
+.subscribe-btn , .toggle-comments-btn{
+  background-color: rgba(255, 0, 0, 0.829);
+  color: white;
+  border: none;
+}
+
+.subscribe-btn:hover{
+  background-color: rgba(255, 0, 0, 0.863);
+}
+
+/* Sign In Page */
+
+.signin-wrapper{
+  height: calc(100vh - 86px);
+}
+
+.signin-form{
+  border: 1px solid rgba(128, 127, 127, 0.288);
+  width: 20%;
+}
+
+.signin-form-field{
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid rgba(109, 108, 108, 0.288);
+  outline: none;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.signin-btn, .signup-btn{
+  background-color:rgba(253, 2, 2, 0.849);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.295);
+  padding: 2px;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Media Queries */
+
+@media (max-width:1460px){
+  .video-card{
+    width: 320px;
+    /* margin: 0 8px; */
+  }
+
+  .nav-and-body{
+    flex:8
+  }
+}
+
+@media (max-width:1276px){
+  .sidebar-text{
+    display: none;
+  }
+  .nav-and-body{
+    flex:9
+  }
+  .sidebar{
+    width: 40px;
+    flex: 0.5;
+    padding: 7px;
+  }
+  .video-card-sm{
+    margin-bottom: 18px;
+    width: 300px;
+  }
+  
+  .current-video{
+    height: 470px;
+  }
+}
+
+@media (max-width:992px){
+  .video-page-wrapper{
+    flex-direction: column;
+  }
+  .video-card-sm{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(128, 127, 127, 0.288);
+    border-radius: 5px;
+  }
+  .thumbnail-img-sm{
+    width: 220px;
+  }
+  .nav-and-body{
+    padding: 0 30px;
+  }
+}
+
+@media (max-width:768px){
+  html{
+    font-size: smaller;
+  }
+  .video-card{
+    width: 250px;
+  }
+  .thumbnail-img{
+    height: 180px;
+  }
+  .thumbnail-img-sm{
+    width: 180px;
+  }
+  .navbar-sign-in-btn{
+    padding: 3px 6px;
+  }
+  .logo-img{
+    height: 32px;
+    width: 32px;
+  }
+  .sidebar{
+    padding-top: 25px;
+  }
+  .current-video{
+    height: 350px;
+  }
+  /* .video-description-text{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    max-width: 200px;
+  } */
+}
+
+@media (max-width:576px){
+  html{
+    font-size: smaller;
+  }
+  .video-card{
+    width: 300px;
+  }
+  .navbar-container{
+    padding: 17px 0;
+  }
+
+  .sidebar{
+    padding: 15px 7px;
+  }
+}
